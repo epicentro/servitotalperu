@@ -1,0 +1,35 @@
+div#logo1 h1{padding:0px;margin:0px;}
+div#logo1 h1 a{display:block;text-indent:-9999px;width:450px;height:107px;background:url(../img/logo_login1.png) no-repeat;}
+
+
+/*
+.br_break{
+	clear:both;
+}
+.div_rotulo{
+	width:200px;
+	height:15px;
+	float:left;
+	text-align:left;
+	padding-top:6px;
+	color:#172736;
+	font-weight:bold;
+	
+	
+}
+.div_campo{
+	width:200px;
+	height:30px;
+	float:left;
+	text-align:left;
+
+}
+.txt_login{
+	border:1px solid #999;
+	width:150px;
+}
+.txt_login:hover{
+	border:1px solid #172736;
+	width:150px;
+}
+*/

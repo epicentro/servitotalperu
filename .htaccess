@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /
+
+# Catch any Google campaigns directed to the home page
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{QUERY_STRING} ^(gclid=.*)
+RewriteRule ^(.*)$ servitotalperu/index.php? [L,PT]
+
+# Everything else except files and directories to the EE controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
+RewriteRule ^(.*)$ servitotalperu/index.php?$1 [L]
+
+
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]

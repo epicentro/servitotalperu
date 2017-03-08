@@ -1,0 +1,18 @@
+#header .header-top span {
+    padding: 0 7px;
+}
+.header-top span i {
+    margin-right: 7px;
+	font-size: 20px;
+}
+.header-top hr {
+    width: 1px;
+    background-color: #fff;
+    margin: 0 0 -2px 0;
+    display: inline-block;
+    height: 12px;
+    padding: 0;
+}
+.nav.navbar-nav.navbar-left {
+    padding-top: 5px;
+}

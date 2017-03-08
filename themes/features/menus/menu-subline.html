@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 10]> <html  lang="en" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu subline | Components | Construction</title>
+    <meta name="description" content="Menu with bottom bar with menu items, show menu sub items horizzontally into a horizontal bar.">
+    <script src="../../plugins/jquery.min.2.1.4.js"></script>
+    <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.css">
+    <script src="../../script.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href='../../plugins/flexslider/flexslider.css'>
+    <link rel="stylesheet" href='../../css/content-box.css'>
+    <link rel="stylesheet" href='../../css/components.css'>
+    <link rel="stylesheet" property="stylesheet" href='../../css/animations.css'>
+    <link rel="stylesheet" href="../../skin.css"><link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <div id="preloader"></div>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="navbar navbar-main">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../../index.html"><img src="../../images/logo.png" alt="logo" /></a>
+                        <button type="button" class="navbar-toggle">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav subline-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About <span class="caret"></span></a></li>
+                            <li><a href="#">Services <span class="caret"></span></a></li>
+                            <li><a href="#">Team <span class="caret"></span></a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Faq <span class="caret"></span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="subline-bar">
+            <div class="container">
+                <ul></ul>
+                <ul>
+                    <li><a href="#">Who we are</a></li>
+                    <li><a href="#">What we do</a></li>
+                    <li><a href="#">Our philosophy</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Web sites</a></li>
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Seo</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Power Point</a></li>
+                    <li><a href="#">Counsulting</a></li>
+                    <li><a href="#">Illutrations</a></li>
+                    <li><a href="#">Copy writing</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Main team</a></li>
+                    <li><a href="#">Collaborators</a></li>
+                    <li><a href="#">CEO</a></li>
+                </ul>
+                <ul></ul>
+                <ul>
+                    <li><a href="#">Users FAQ</a></li>
+                    <li><a href="#">B2B FAQ</a></li>
+                    <li><a href="#">General informations</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="section-slider home-slider">
+        <div class="flexslider advanced-slider slider white" data-options="animation:fade">
+            <ul class="slides">
+                <li data-slider-anima="fade-right" data-timeline="asc">
+                    <div class="section-slide">
+                        <div class="bg-cover" style="background-image:url('../../images/slide-4.jpg')"></div>
+                        <div class="container">
+                            <div class="container-middle">
+                                <div class="container-inner white text-left">
+                                    <h1 class="text-bold anima">OUR WORK IS OUR PASSION</h1>
+                                    <p class="anima">
+                                        Lorem ipsum dolor sit amet, consectetur <br />adipisicing elit, sed do eiusmod
+                                        tempor incididunt.
+                                    </p>
+                                    <hr class="space s" />
+                                    <button class="btn btn-default anima" type="button">Show service</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-slider-anima="show-scale" data-timeline="asc">
+                    <div class="section-slide">
+                        <div class="bg-cover" style="background-image:url('../../images/slide-5.jpg')"></div>
+                        <div class="container">
+                            <div class="container-middle">
+                                <div class="container-inner white">
+                                    <h1 class="text-bold anima">WELCOME TO CONSTRUCTION</h1>
+                                    <p class="anima">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt.
+                                    </p>
+                                    <hr class="space s" />
+                                    <button class="btn btn-default anima" type="button">Who we are</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-slider-anima="fade-right" data-timeline="asc">
+                    <div class="section-slide">
+                        <div class="bg-cover" style="background-image:url('../../images/slide-6.jpg')"></div>
+                        <div class="container">
+                            <div class="container-middle">
+                                <div class="container-inner white text-left">
+                                    <h1 class="text-bold anima">BUILDING A MODERN HOUSE</h1>
+                                    <p class="anima">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br />
+                                        tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    </p>
+                                    <hr class="space s" />
+                                    <button class="btn btn-default anima" type="button">Show prices</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-empty">
+        <div class="call-action-box full-width">
+            <div class="container content white">
+                <div class="advs-box vertical-row">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>Get a free quote now or ask us a question, it's free, simple and fast. We will be happy to answer you. </p>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="circle-button btn-sm" href="#">GET A QUOTE </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content">
+            <div class="title-base title-small text-left" data-anima="show-scale" data-trigger="hover">
+                <h2>OUR SERVICES</h2>
+                <hr class="anima" />
+            </div>
+            <hr class="space m" />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="advs-box advs-box-top-icon" data-anima="scale-up" data-trigger="hover">
+                        <i class="anima icon onlycover text-l" style="background-image:url(../../images/icons/yellow/icon-31.png)"></i>
+                        <h3>BUILDINGS</h3>
+                        <p>
+                            L'orem ipsum dolor "sitamet", consectetur 'adipisicing' elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advs-box advs-box-top-icon" data-anima="scale-up" data-trigger="hover">
+                        <i class="anima icon onlycover text-l" style="background-image:url(../../images/icons/yellow/icon-33.png)"></i>
+                        <h3>ASSISTENCE</h3>
+                        <p>
+                            L'orem ipsum dolor "sitamet", consectetur 'adipisicing' elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advs-box advs-box-top-icon" data-anima="scale-up" data-trigger="hover">
+                        <i class="anima icon onlycover text-l" style="background-image:url(../../images/icons/yellow/icon-23.png)"></i>
+                        <h3>MANAGEMENT</h3>
+                        <p>
+                            L'orem ipsum dolor "sitamet", consectetur 'adipisicing' elit, sed do eiusmod tempor incididunt
+                            ut labore.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advs-box advs-box-top-icon" data-anima="scale-up" data-trigger="hover">
+                        <i class="anima icon onlycover text-l" style="background-image:url(../../images/icons/yellow/icon-36.png)"></i>
+                        <h3>INTERIOR DESIGN</h3>
+                        <p>
+                            L'orem ipsum dolor "sitamet", consectetur 'adipisicing' elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="space m" />
+            <div class="row">
+                <div class="col-md-6">
+                    <hr class="space" />
+                    <div class="title-base title-small text-left" data-anima="show-scale" data-trigger="hover">
+                        <h2>OUR COMPANY</h2>
+                        <hr class="anima" />
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat duis aute irure dolor.
+                        <br /><br />
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat duis aute irure dolor.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img alt="" data-anima="fade-right" src="../../images/man.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="white">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-left">
+                        <h4>ABOUT US</h4>
+                        <hr class="e" />
+                        <hr class="space s" />
+                        <img alt="" src="../../images/logo-light.png" />
+                        <hr class="space s" />
+                        <p>
+                            Construction SRL works as international construction services company and is a leading builder in diverse and numerous market segments.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-left">
+                        <h4>CONTACTS</h4>
+                        <hr class="e" />
+                        <hr class="space s" />
+                        <ul class="fa-ul text-s">
+                            <li><i class="fa-li fa fa-map-marker"></i> PO Box 16122, Collins Street West, Victoria 8007, United States.</li>
+                            <li><i class="fa-li fa fa-envelope"></i> federico@pixor.it</li>
+                            <li><i class="fa-li fa fa-mobile-phone"></i> (+39) 320 33022256</li>
+                        </ul>
+                        <div class="btn-group navbar-social">
+                            <div class="btn-group social-group">
+                                <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                                <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+                                <a target="_blank" href="#"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>INFOMATIONS</h4>
+                        <hr class="e" />
+                        <hr class="space s" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="fa-ul text-s">
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Home</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Company</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Certifications</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Company</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Core Values</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="fa-ul text-s">
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Faq</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Manuals</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Company History</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Locations</a></li>
+                                    <li><i class="fa-li fa fa-angle-double-right"></i> <a href="#">Privacy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-row">
+            <div class="copy-text">
+                ALL RIGHT RESERVED | FRAMEWORK Y | ENVATO
+            </div>
+        </div>
+
+        <link rel="stylesheet" property="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
+        <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src='../../plugins/flexslider/jquery.flexslider-min.js'></script>
+        <script src='../../plugins/jquery.tab-accordion.js'></script>
+        <script src='../../plugins/parallax.min.js'></script>
+    </footer>
+</body>
+</html>

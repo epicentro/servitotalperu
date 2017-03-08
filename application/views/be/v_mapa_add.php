@@ -1,0 +1,258 @@
+<?php
+           if(isset($recarga_padre) && $recarga_padre=="si"){
+
+              
+				   echo "<script>";
+				   echo " window.opener.location.reload();";
+                                   echo " window.close();";
+				   echo "</script>";
+                                   exit();
+           }//endIF
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Nuevo Registro</title>
+        <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url(); ?>css/personal.css" />
+
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.6.2.js"></script>
+
+ <!-- ESTE jquery-ui.js es muy importante para hacer AJAX CON JSON-->
+ <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
+
+
+ <script type="text/javascript" src="<?php echo base_url(); ?>js/mis_js.js"></script>
+ <script type="text/javascript" src="<?php echo base_url();?>ajax/funciones_query.js"></script>
+ <script type="text/javascript" src="<?php echo base_url();?>js/fckeditor/fckeditor.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function()
+{
+	/*
+        var oFCKeditor = new FCKeditor( 'sumilla' ) ;
+	oFCKeditor.BasePath = "<?php echo base_url();?>js/fckeditor/";
+        oFCKeditor.Width  = '700' ;
+	oFCKeditor.Height = '300' ;
+        oFCKeditor.ReplaceTextarea();
+       */
+}
+
+
+function validar(){
+    
+    var idcategoria_clientes=$.trim($("#idcategoria_clientes").val());
+    var seo=$.trim($("#seo").val());
+    
+
+   
+
+   if(idcategoria_clientes=="0"){//este es combo
+
+       var men="Por favor seleccione una categoría.";
+       alert(men);
+       $("#idcategoria_cliente").focus();
+        return false;
+
+   }//endIF
+   
+   
+   /*
+   if(seo.length==0){
+
+       var men="Por favor ingrese el seo.";
+       alert(men);
+       $("#seo").focus();
+        return false;
+
+   }//endIF
+*/
+   
+
+  
+
+  
+
+
+
+}
+
+</script>
+
+
+
+    </head>
+    <body>
+        
+        
+
+       <form id="form1" method="post" enctype="multipart/form-data" action="<?php echo base_url();?>be/<?php echo $this->tabla; ?>/grabar" onsubmit="return validar();" >
+
+        <table cellpadding="0" cellspacing="0" class="tb_mnto"  >
+
+
+<!--seo_title, seo_descripcion, seo_keywords, text_html-->
+
+      
+
+            
+            <?php
+                   
+              //PONEMOS CADA FILA DEL ARRAY EN UNA VARIABLE $fila 
+              foreach($this->estructura as $filas){
+                   
+                     
+                     //LA FILA $fila la vaciamos en key=>valor
+                     foreach($filas as $i => $value){
+                            //echo $i."=".$filas[$i]."<br/>";
+                     }//endFor
+                     
+                        if($filas["show"]=="si"){
+                                
+                                if($filas["clave"]=="foranea"){
+                                    
+                                          
+                                          if($filas["multinivel"]=="si"){
+                                              
+               ?>                               
+                                              
+                                                    <tr>
+                                                            <td>
+                                                            <?php echo $filas["rotulo"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                    <select name='<?php echo $filas["nombre_campo"]; ?>' id='<?php echo $filas["nombre_campo"]; ?>'>
+                                                                    <option value="0">Seleccione una categoría</option>
+                                                                    <?php echo $combo; ?>
+                                                                    </select>
+                                                            </td>
+                                                    </tr>                             
+                                              
+               <?php                               
+                                              
+                                          
+                                          }elseif($filas["multinivel"]=="no"){
+                                        
+                                        
+             ?>
+                                                    <tr>
+                                                            <td>
+                                                            <?php echo $filas["rotulo"]; ?>
+                                                            </td>
+                                                            <td>
+
+                                                            <?php 
+                                                                        //si es clave foranea averiguamos la tabla
+                                                                        $parte=explode("id", $filas["nombre_campo"]);
+                                                                        $tabla=$parte[1];
+                                                                        //Aquí $filas["nombre"] es el ID de la Tabla
+                                                                        $strsql="select ".$filas["nombre_campo"].", nombre from ".$tabla;
+                                                                        $rows=$this->modelo_base->consulta($strsql);
+
+                                                                        //LAS CLAVES FORANEAS SIEMPRE VAN EN COMBOS
+                                                                        echo "<select name='".$filas["nombre_campo"]."' id='".$filas["nombre_campo"]."'>";
+                                                                        if($rows!="0"){
+                                                                            foreach($rows as $row){
+
+
+                                                                                echo "<option value='".$row->$filas["nombre_campo"]."'>".$row->nombre."</option>";
+
+                                                                            }//endFor
+                                                                        }//endIF    
+                                                                        echo "</select>";
+                                                            ?>   
+
+                                                            </td>
+                                                    </tr>  
+                                            
+                                            
+            <?php                     
+                                          }//endIF      
+                                  
+                                }else if($filas["clave"]=="no"){//SI NO ES CLAVE FOREANA NI PRIMARIA
+                                  
+                                    //PREGUNTAMOS EL TIPO DE CAMPO SI ES TEXT
+                                    if($filas["tipo"]=="text"){
+                                        
+             ?>                          
+                                       <tr>
+                                                <td>
+                                                <?php echo $filas["rotulo"]; ?>
+                                                </td>
+                                                <td>
+                                                <textarea name="<?php echo $filas["nombre_campo"]; ?>" id="<?php echo $filas["nombre_campo"]; ?>" rows="10" cols="20" ></textarea>
+                                                <script>
+                                                
+                                                            var oFCKeditor = new FCKeditor( '<?php echo $filas["nombre_campo"]; ?>' ) ;
+                                                            oFCKeditor.BasePath = "<?php echo base_url();?>js/fckeditor/";
+                                                            oFCKeditor.Config['EnterMode'] = 'br';
+                                                            oFCKeditor.Width  = '700' ;
+                                                            oFCKeditor.Height = '300' ;
+                                                            oFCKeditor.ReplaceTextarea();
+
+                                                   
+                                                </script>
+                                                </td>
+                                        </tr>   
+                                        
+                                        
+             <?php                           
+                                        
+                                    }elseif($filas["tipo"]=="varchar"){
+                                        
+            ?>                          
+                                         
+                                                 <tr>
+                                                        <td>
+                                                        <?php echo $filas["rotulo"]; ?>
+                                                        </td>
+                                                        <td>
+                                                                <input name="<?php echo $filas["nombre_campo"]; ?>"  id="<?php echo $filas["nombre_campo"]; ?>" style="width:400px;"  /><br/>
+                                                        </td>
+                                                </tr>   
+                                        
+                                                                               
+                                        
+             <?php                                                       
+                                        
+                                    }//endIF
+                              
+                            
+            ?>
+                                        
+                                        
+                                        
+            <?php
+                               }//endIF DE CLAVE 
+                        }//endIF DE SHOW
+                        
+                        
+                     
+                   
+               }//endFor DEL PRIMER FOR
+          
+          ?>
+
+            
+            
+          
+            
+
+
+
+
+            <tr>
+                <td colspan="2">
+                   <input type="submit" name="Subir" value="Grabar" id="save" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+       </form>
+
+    </body>
+</html>
