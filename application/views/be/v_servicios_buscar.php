@@ -147,7 +147,7 @@ function validar(){
 
        </form>
         
-        <form id="form1" method="post" enctype="multipart/form-data" action="<?php echo base_url();?>be/<?php echo $this->tabla; ?>/buscar" onsubmit="return validar();" >
+ <!--        <form id="form1" method="post" enctype="multipart/form-data" action="<?php //echo base_url();?>be/<?php //echo $this->tabla; ?>/buscar" onsubmit="return validar();" >
 
         <table cellpadding="0" cellspacing="0" class="tb_mnto"  >
 
@@ -159,7 +159,7 @@ function validar(){
                 </td>
                 <td >
                     <select name="categoria" id="categoria">
-                    <?php echo $combo; ?>    
+                    <?php //echo $combo; ?>    
                     </select>
                 </td>
 
@@ -178,7 +178,7 @@ function validar(){
 
         </table>
 
-       </form>
+       </form> -->
 
     </body>
 </html>

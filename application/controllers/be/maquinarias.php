@@ -30,7 +30,7 @@ class maquinarias extends CI_Controller {
         
         //idmaquinarias, idcategoria_maquinarias, title, keyword, description, nombre, seo, codigo, sumilla, descripcion, ficha_tecnica, idsw
         array('nombre_campo'=>'idmaquinarias', 'tipo'=>'varchar', 'show'=>'no' ,'clave'=>'primaria', 'rotulo'=>'', 'multinivel'=>'no', 'valor'=>''),
-        array('nombre_campo'=>'idcategoria_maquinarias', 'tipo'=>'varchar', 'show'=>'si' ,'clave'=>'foranea', 'rotulo'=>'Categoria', 'multinivel'=>'si', 'valor'=>''),
+        //array('nombre_campo'=>'idcategoria_maquinarias', 'tipo'=>'varchar', 'show'=>'si' ,'clave'=>'foranea', 'rotulo'=>'Categoria', 'multinivel'=>'si', 'valor'=>''),
         //array('nombre_campo'=>'idmarcas', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'foranea', 'rotulo'=>'Marcas', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'title', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Title', 'multinivel'=>'no',  'valor'=>''),
         array('nombre_campo'=>'keyword', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Keyword', 'multinivel'=>'no', 'valor'=>''),
@@ -821,7 +821,7 @@ public function editar(){
             //Eliminamos las imagenes
             $strsql="select imagen from maquinarias_imagenes where id$this->tabla='$id'";
             $fila=$this->modelo_base->c_una_fila($strsql);
-            if($fila=!"0"){
+            if($fila<>"0"){
                  
                 
                 

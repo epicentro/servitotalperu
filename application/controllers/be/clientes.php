@@ -670,7 +670,7 @@ public function editar(){
     }//endFunction
 
 
-   function elimina_banners(){
+   function elimina_clientes(){
 
        $this->validacion->validacion_login();
 

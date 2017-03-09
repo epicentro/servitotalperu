@@ -14,8 +14,9 @@
                                  // var_dump($servicios);
                                  // echo '</pre>';                                 
                                     if($servicios!="0"){
-                                        $con=1;
+                                        $con=0;
                                         foreach($servicios as $pro){
+                                            $con++;
                                             ?>
                                             <li class="col-md-3 col-sm-6 col-xs-12 product" style="margin-bottom: 30px;">
                                                 <span class="product-thumb-info">
@@ -39,7 +40,8 @@
                                             </li>                                                        
                        
                                             <?php
-
+                                                            if($con % 4 ==0){?> <div class="clearfix hidden-xs hidden-sm"></div> <?php }
+                                                            if($con % 2 ==0){?> <div class="clearfix hidden-xs hidden-md hidden-lg"></div> <?php }
                                                 
                                           }//endFor
                                               

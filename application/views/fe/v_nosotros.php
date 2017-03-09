@@ -3,7 +3,7 @@
                 <div class="container" id="nosotros">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <div class="panel-group" id="accordion">
+                            <div class="panel-group mb-xlg" id="accordion">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">

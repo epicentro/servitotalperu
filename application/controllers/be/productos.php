@@ -821,7 +821,7 @@ public function editar(){
             //Eliminamos las imagenes
             $strsql="select imagen from productos_imagenes where id$this->tabla='$id'";
             $fila=$this->modelo_base->c_una_fila($strsql);
-            if($filas=!"0"){
+            if($fila<>"0"){
                  
                 
                 

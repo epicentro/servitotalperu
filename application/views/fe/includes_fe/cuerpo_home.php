@@ -21,7 +21,7 @@
         <div class="container">
           <div class="row mt-xl mb-xl">
             <div class="col-md-3">
-              <img class="img-responsive mt-xl appear-animation" src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[0]->imagen;?>" alt="" data-appear-animation="fadeInLeft">
+              <img class="img-responsive appear-animation" src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[0]->imagen;?>" alt="" data-appear-animation="fadeInLeft">
             </div>
             
             <div class="col-md-9">

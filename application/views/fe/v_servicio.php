@@ -58,17 +58,15 @@
 					</div> -->
 
 					<div class="row mb-xlg">
-						<div class="col-sm-7">
+						<div class="col-sm-12">
 							<h2><strong>Descripción</strong></h2>
 
 							<p class="mt-xlg">
-								 <?php echo $descripcion;?>
+								<img class="pull-left mr-xlg mb-xlg img-serv" src='<?php echo base_url()."img_servicios/".$imagenes[0]->imagen; ?>' alt="">
+								<?php echo $descripcion;?>
 							</p>
 							<br><br><br>
 
-						</div>
-						<div class="col-sm-4 col-sm-offset-1 mt-xlg">
-							<img class="img-responsive mt-xlg" src='<?php echo base_url()."img_servicios/".$imagenes[0]->imagen; ?>' alt="">
 						</div>
 						<br>
 
@@ -84,7 +82,7 @@
 						}
 						?>
 					</div>
-					<a href="javascript: history.back()" class="btn btn-lg btn-primary mt-xl pull-right">Volver</a>
+					<a href="javascript: history.back()" class="btn btn-lg btn-primary mt-xl pull-right mb-xlg">Volver</a>
 				</div>
 
 

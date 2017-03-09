@@ -122,7 +122,7 @@ function abrir_popup(valor, ancho, alto){
                         <img class="img_link" onclick="abrir_popup('<?php echo base_url()."be/".$this->tabla."/v_editar/".$row->$idtabla;?>',1000,530);" src="<?php echo base_url();?>img/edit.png" width="16" height="16" title="Actualizar"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <img class="img_link" onclick = "javascript:elimina_banners('<?php echo $row->$idtabla; ?>')" src="<?php echo base_url();?>img/cancel.png" width="16" height="16" title="Eliminar"/>
+                        <img class="img_link" onclick = "javascript:elimina_clientes('<?php echo $row->$idtabla; ?>')" src="<?php echo base_url();?>img/cancel.png" width="16" height="16" title="Eliminar"/>
 
 
             </th>

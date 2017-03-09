@@ -56,6 +56,26 @@ function elimina_productos(valor){
  }//EndFunction
  
 
+
+
+function elimina_clientes(valor){
+
+            
+            if(document.domain=="localhost"){
+                var ruta="http://localhost/servitotalperu/be/clientes/elimina_clientes";
+            }else{
+                var ruta="http://"+document.domain+"/be/productos/elimina_clientes";
+            }
+
+
+          if(confirm("Seguro de eliminar")){
+
+              $.post(ruta, {sw:4, valores:valor}, llegajson, "json");
+            // alert(valor)
+          }
+
+ }//EndFunction
+
 function elimina_maquinarias(valor){
 
             

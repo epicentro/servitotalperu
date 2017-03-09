@@ -11,8 +11,9 @@
                             <ul class="portfolio-list sort-destination" data-sort-id="portfolio">
                                              <?php
                                                 if($productos!="0"){
-                                                    $con=1;
+                                                    $con=0;
                                                     foreach($productos as $pro){
+                                                        $con++;
                                                         ?>
                                                         <li class="col-md-3 col-sm-6 col-xs-12 product" style="margin-bottom: 30px;">
                                                                                         <!-- 
@@ -51,6 +52,9 @@
                                    
                                                         <?php
 
+                                                            if($con % 4 ==0){?> <div class="clearfix hidden-xs hidden-sm"></div> <?php }
+                                                            if($con % 2 ==0){?> <div class="clearfix hidden-xs hidden-md hidden-lg"></div> <?php }
+                                
                                                             
                                                       }//endFor
                                                           
