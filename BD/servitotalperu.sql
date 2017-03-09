@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 09-03-2017 a las 12:02:20
+-- Tiempo de generación: 09-03-2017 a las 23:39:26
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `banners` (
   `idsw` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idbanners`),
   KEY `banners_FKIndex1` (`idcategoria_banners`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `banners`
@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `categoria_productos` (
   `idsw` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idcategoria_productos`),
   KEY `categoria_ubicacion_FKIndex1` (`idtipo_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `categoria_productos`
@@ -320,7 +320,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `idprimera_hoja` int(10) NOT NULL,
   PRIMARY KEY (`idclientes`),
   KEY `clientes_FKIndex1` (`idcategoria_clientes`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -458,7 +458,7 @@ CREATE TABLE IF NOT EXISTS `maquinarias` (
   PRIMARY KEY (`idmaquinarias`),
   KEY `inmuebles_FKIndex4` (`idestado`),
   KEY `productos_FKIndex2` (`idcategoria_maquinarias`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `maquinarias`
@@ -522,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   `estado` int(10) unsigned NOT NULL,
   `link` varchar(150) NOT NULL,
   PRIMARY KEY (`idmensajes`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `mensajes`
@@ -536,7 +536,9 @@ INSERT INTO `mensajes` (`idmensajes`, `nombre`, `correo`, `telefono`, `asunto`, 
 (5, 'qcqsc', 'ccec@ded.com', '', 'ewdfq', 'deqdeqfqefceq wd cs fc \r\ncs \r\nwd \r\n w\r\n', '2017-01-23 22:50:48', 0, ''),
 (6, 'cqdc', 'qc@dede.com', '', 'eedfee2de2', 'dededwed', '2017-01-23 22:54:20', 0, ''),
 (7, '', 'ede@eded.com', '', 'qedeq', 'qed', '2017-01-24 00:15:48', 0, ''),
-(8, 'swsw', 'julio_jc2002@hotmail.com', '', 'ded', 'ed', '2017-02-14 01:27:26', 0, 'http://localhost/servitotalperu/contacto/');
+(8, 'swsw', 'julio_jc2002@hotmail.com', '', 'ded', 'ed', '2017-02-14 01:27:26', 0, 'http://localhost/servitotalperu/contacto/'),
+(9, 'juj', 'julio_jc2002@hotmail.com', '', 'juju', 'jujuju', '2017-03-09 15:16:57', 0, 'http://localhost/servitotalperu/contacto/'),
+(10, 'Julio Quevedo', 'julio_jc2002@hotmail.com', '', 'gtgtg', 'tgege', '2017-03-09 15:18:40', 0, 'http://localhost/servitotalperu/producto-02/');
 
 -- --------------------------------------------------------
 
@@ -673,7 +675,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   PRIMARY KEY (`idproductos`),
   KEY `inmuebles_FKIndex4` (`idestado`),
   KEY `productos_FKIndex2` (`idcategoria_productos`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -731,7 +733,7 @@ CREATE TABLE IF NOT EXISTS `productos_imagenes` (
   `idprimera_foto` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idproductos_imagenes`),
   KEY `productos_imagenes_FKIndex1` (`idproductos`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `productos_imagenes`
@@ -812,7 +814,7 @@ CREATE TABLE IF NOT EXISTS `servicios` (
   PRIMARY KEY (`idservicios`),
   KEY `inmuebles_FKIndex4` (`idestado`),
   KEY `productos_FKIndex2` (`idcategoria_servicios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `servicios`
