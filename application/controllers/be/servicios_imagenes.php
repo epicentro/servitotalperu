@@ -575,7 +575,7 @@ class servicios_imagenes extends CI_Controller {
 
 
                                                                 //ANTES DE GRABAR BORRAMOS EL LAS IMAGENES ANTERIORES
-                                                                $strsql="select imagen from $this->tabla where id$this->tabla='$id' and idservicios_imagenes='$idservicios_imagenes'";
+                                                                $strsql="select imagen from $this->tabla where id$this->tabla='$idservicios_imagenes'";
 
                                                                 $fila=$this->modelo_base->c_una_fila($strsql);
 

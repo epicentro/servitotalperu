@@ -11,8 +11,8 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="call-to-action-content align-left pb-md mb-xl ml-none">
-                  <h2 class="text-color-light mb-none mt-xl"><?php echo $titulo_ofrece;?></strong></h2>
-                  <p class="lead mb-xl"><?php echo $descripcion_ofrece;?></p>
+                  <h2 class="text-color-light mb-none mt-xl"><?php echo $this->be_parametros->valor("titulo_ini_1"); ?></h2>
+                  <p class="lead mb-xl"><?php echo $this->be_parametros->valor("subtitulo_ini_1"); ?></p>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="call-to-action-content align-left pb-md mb-xl ml-none">
-                  <h2 class="text-color-light mb-none mt-xl"><?php echo $titulo_maquinarias;?></h2>
+                  <h2 class="text-color-light mb-none mt-xl"><?php echo $this->be_parametros->valor("titulo_ini_2"); ?></h2>
                 </div>
               </div>
             </div>

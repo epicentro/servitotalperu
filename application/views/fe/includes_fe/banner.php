@@ -36,7 +36,9 @@
                 if($c==1)$active="active";
                 ?>    
                 <div class="item <?php echo $active;?>">
-                  <img src="<?php echo base_url()."img_banners/".$b->imagen; ?>" alt="Chania">
+                  <a href="<?php echo $b->link; ?>" target="_blank">
+                    <img src="<?php echo base_url()."img_banners/".$b->imagen; ?>" alt="<?php echo $b->alt; ?>">
+                  </a>
                 </div>
                 <?php
                 $c++;

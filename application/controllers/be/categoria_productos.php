@@ -513,5 +513,90 @@ public function editar(){
     }//endFunction
 
 
+   function equi_foto($file, $ruta, $ancho_deseado, $alto_deseado){
+                $imagen_subida=$file; //Le ponemos el mismo nombre para que chanque el subido
+
+                // Creamos una imagen con fondo blanco para el thumbnail 
+                $imagen_nueva=imagecreatetruecolor($ancho_deseado,$alto_deseado); 
+                $fondo=imagecolorallocate($imagen_nueva, 255, 255, 255);     
+                imagefill($imagen_nueva, 0, 0, $fondo);  
+
+                 // Cargamos la fotografía y guardamos sus dimensiones y ratio 
+
+                $extension = strtolower(strrchr($file, '.'));
+
+                switch ($extension) {
+                    case '.jpg':
+                    case '.jpeg':
+                        $foto_entera = @imagecreatefromjpeg($ruta.$file);
+                        break;
+                    case '.gif':
+                        $foto_entera = @imagecreatefromgif($ruta.$file);
+                        break;
+                    case '.png':
+                        $foto_entera = @imagecreatefrompng($ruta.$file);
+                        break;
+
+                }
+                
+                $ancho_foto=imagesx($foto_entera); 
+                $alto_foto=imagesy($foto_entera); 
+                
+                if($ancho_foto<$ancho_deseado && $alto_foto<$alto_deseado){
+                    $top=($alto_deseado-$alto_foto)/2;
+                    $left=($ancho_deseado-$ancho_foto)/2;
+                    imagecopyresampled($imagen_nueva,$foto_entera,$left,$top,0,0,$ancho_foto,$alto_foto,$ancho_foto,$alto_foto);
+                    
+                }else{
+                
+                        if($ancho_foto>$alto_foto){
+
+                            $ratio_foto=$ancho_foto/$alto_foto;
+                            $top=($alto_deseado - ($ancho_deseado/$ratio_foto))/2;
+                            imagecopyresampled($imagen_nueva,$foto_entera,0,$top,0,0,$ancho_deseado,($ancho_deseado/$ratio_foto),$ancho_foto,$alto_foto);  
+
+                        }elseif($alto_foto>$ancho_foto){
+
+                            $ratio_foto=$alto_foto/$ancho_foto; 
+                            $left=($ancho_deseado - ($alto_deseado/$ratio_foto))/2;
+                            imagecopyresampled($imagen_nueva,$foto_entera,$left,0,0,0,($alto_deseado/$ratio_foto),$alto_deseado,$ancho_foto,$alto_foto);  
+                            
+                        }else{//cuando es un cuadrado
+                            
+                            if($ancho_foto<$ancho_deseado){
+                                 $top=($ancho_deseado - $ancho_foto)/2;
+                                imagecopyresampled($imagen_nueva,$foto_entera,$top,0,0,0,$ancho_foto,$alto_deseado,$ancho_foto,$alto_foto);          
+                            
+                            
+                            }elseif($alto_foto<$alto_deseado){
+                                $left=($alto_deseado - $alto_foto)/2;
+                                imagecopyresampled($imagen_nueva,$foto_entera,0,$left,0,0,$ancho_deseado,$alto_foto,$ancho_foto,$alto_foto);          
+                                
+                            }else{
+                               
+                               imagecopyresampled($imagen_nueva,$foto_entera,0,0,0,0,$ancho_foto,$alto_foto,$ancho_foto,$alto_foto);                                     
+                            }
+                            
+                        }//endIF
+                }//endIF
+                
+               
+     
+                switch ($extension) {
+                            case '.jpg':
+                            case '.jpeg':
+                                imagejpeg($imagen_nueva,$ruta.$imagen_subida,100); 
+                                break;
+                            case '.gif':
+                                imagegif($imagen_nueva,$ruta.$imagen_subida,100); 
+                                break;
+                            case '.png':
+                                //En png va del 1 a 9
+                                imagepng($imagen_nueva,$ruta.$imagen_subida,9); 
+                                break;
+
+                 }
+        
+    }//endFunction
 }
 ?>

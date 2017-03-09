@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10.18
--- https://www.phpmyadmin.net
+-- version 3.5.1
+-- http://www.phpmyadmin.net
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 08-03-2017 a las 13:00:29
--- Versión del servidor: 5.6.35
--- Versión de PHP: 5.6.30
+-- Servidor: localhost
+-- Tiempo de generación: 09-03-2017 a las 12:02:20
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `servitot_servitotalperu`
+-- Base de datos: `servitotalperu`
 --
 
 -- --------------------------------------------------------
@@ -77,16 +77,16 @@ CREATE TABLE IF NOT EXISTS `banners` (
   `idsw` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idbanners`),
   KEY `banners_FKIndex1` (`idcategoria_banners`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `banners`
 --
 
 INSERT INTO `banners` (`idbanners`, `idcategoria_banners`, `nombre`, `link`, `sumilla`, `descripcion`, `imagen`, `orden`, `alt`, `idsw`) VALUES
-(1, 1, 'BANNER BANNER BANNER 01', '#', '&nbsp;', '', 'banners_1_kpPFk.jpg', 1, '', 1),
-(2, 1, 'BANNER BANNER BANNER 02', '#', '&nbsp;', '', 'banners_2_FPXHH.jpg', 2, '', 1),
-(3, 1, 'BANNER BANNER BANNER 03', '#', '&nbsp;', '', 'banners_3_pajo4.jpg', 3, '', 1);
+(1, 1, 'BANNER BANNER BANNER 01', '#', '&nbsp;', '', 'banners_1_kpPFk.jpg', 1, 'alt', 1),
+(2, 1, 'BANNER BANNER BANNER 02', '#', '&nbsp;', '', 'banners_2_FPXHH.jpg', 2, 'alt', 1),
+(3, 1, 'BANNER BANNER BANNER 03', '#', '&nbsp;', '', 'banners_3_pajo4.jpg', 3, 'alt', 1);
 
 -- --------------------------------------------------------
 
@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `categoria_productos` (
   `idsw` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idcategoria_productos`),
   KEY `categoria_ubicacion_FKIndex1` (`idtipo_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `categoria_productos`
@@ -260,13 +260,12 @@ CREATE TABLE IF NOT EXISTS `categoria_productos` (
 
 INSERT INTO `categoria_productos` (`idcategoria_productos`, `idtipo_categoria`, `title`, `keyword`, `description`, `nombre`, `seo`, `titulo`, `nivel`, `padre_id`, `orden`, `sumilla`, `imagen`, `idprimera_hoja`, `idsw`) VALUES
 (2, 1, 'Productos', 'Productos', 'Productos', 'Productos', 'Productos', 'Productos', 0, 0, 2, '', '', 0, 1),
-(5, 1, 'sub cat prod 2', 'sub cat prod 2', 'sub cat prod 2', 'sub cat prod 2', 'sub-cat-prod-2', 'sub cat prod 2', 0, 2, 2, '', 'categoria_productos_5_cveBs.png', 0, 1),
-(6, 1, 'sub cat prod 1', 'sub cat prod 1', 'sub cat prod 1', 'sub cat prod 1', 'sub-cat-prod-1', 'sub cat prod 1', 0, 2, 1, '', 'categoria_productos_6_YGwDn.png', 0, 1),
-(7, 1, 'sub cat prod 3', 'sub cat prod 3', 'sub cat prod 3', 'sub cat prod 3', 'sub-cat-prod-3', 'sub cat prod 3', 0, 2, 3, '', 'categoria_productos_7_PGnbZ.png', 0, 1),
-(8, 1, 'sub cat prod 4', 'sub cat prod 4', 'sub cat prod 4', 'sub cat prod 4', 'sub-cat-prod-4', 'sub cat prod 4', 0, 2, 4, '', 'categoria_productos_8_7sVty.png', 0, 1),
-(9, 1, 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub-sub-cat-prod-1', 'sub sub cat prod 1', 0, 6, 1, '<p>&nbsp;sub sub cat prod 1</p>', 'categoria_productos_9_sFSgJ.png', 0, 1),
-(10, 1, 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub-sub-cat-prod-2', 'sub sub cat prod 2', 0, 6, 2, '', 'categoria_productos_10_7JBJP.png', 0, 1),
-(11, 1, 'sub sub sub cat 1', 'sub sub sub cat 1', 'sub sub sub cat 1', 'sub sub sub cat 1', 'sub-sub-sub-cat-1', 'sub sub sub cat 1', 0, 10, 7, '', 'categoria_productos_11_06Vo1.png', 0, 1);
+(5, 1, 'sub cat prod 2', 'sub cat prod 2', 'sub cat prod 2', 'sub cat prod 2', 'sub-cat-prod-2', 'sub cat prod 2', 0, 2, 2, '', 'categoria_productos_5_LZklg.jpg', 0, 1),
+(6, 1, 'sub cat prod 1', 'sub cat prod 1', 'sub cat prod 1', 'sub cat prod 1', 'sub-cat-prod-1', 'sub cat prod 1', 0, 2, 1, '', 'categoria_productos_6_KBT62.jpg', 0, 1),
+(7, 1, 'sub cat prod 3', 'sub cat prod 3', 'sub cat prod 3', 'sub cat prod 3', 'sub-cat-prod-3', 'sub cat prod 3', 0, 2, 3, '', 'categoria_productos_7_d74hn.jpg', 0, 1),
+(8, 1, 'sub cat prod 4', 'sub cat prod 4', 'sub cat prod 4', 'sub cat prod 4', 'sub-cat-prod-4', 'sub cat prod 4', 0, 2, 4, '', 'categoria_productos_8_8Z5QT.jpg', 0, 1),
+(9, 1, 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub sub cat prod 1', 'sub-sub-cat-prod-1', 'sub sub cat prod 1', 0, 6, 1, '<p>&nbsp;sub sub cat prod 1</p>', 'categoria_productos_9_Q6i6g.jpg', 0, 1),
+(10, 1, 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub sub cat prod 2', 'sub-sub-cat-prod-2', 'sub sub cat prod 2', 0, 6, 2, '', 'categoria_productos_10_hmgkM.jpg', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -469,7 +468,7 @@ INSERT INTO `maquinarias` (`idmaquinarias`, `idcategoria_maquinarias`, `idestado
 (1, 1, 0, 'Maquinaria 01', 'Maquinaria 01', 'Maquinaria 01', 'Maquinaria 01', '', 'Maquinaria-01', '', 'It is a long established fact that a reader will be distracted by the &nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '0.00', '', '', '', 1, 1, 1, '0000-00-00', '', '', ''),
 (2, 1, 0, 'Maquinaria 02', 'Maquinaria 02', 'Maquinaria 02', 'Maquinaria 02', '', 'Maquinaria-02', '', 'It is a long established fact that a reader will be distracted by the &nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '0.00', '', '', '', 2, 1, 1, '0000-00-00', '', '', ''),
 (3, 1, 0, 'Maquinaria 03', 'Maquinaria 03', 'Maquinaria 03', 'Maquinaria 03', '', 'Maquinaria-03', '', 'It is a long established fact that a reader will be distracted by the &nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '0.00', '', '', '', 3, 1, 1, '0000-00-00', '', '', ''),
-(4, 1, 0, 'Maquinaria 04', 'Maquinaria 04', 'Maquinaria 04', 'Maquinaria 04', '', 'Maquinaria-04', '', 'It is a long established fact that a reader will be distracted by the &nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '0.00', '', '', '', 4, 2, 1, '0000-00-00', '', '', '');
+(4, 1, 0, 'Maquinaria 04', 'Maquinaria 04', 'Maquinaria 04', 'Maquinaria 04', '', 'Maquinaria-04', '', 'It is a long established fact that a reader will be distracted by the &nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '0.00', '', '', '', 4, 1, 1, '0000-00-00', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -523,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   `estado` int(10) unsigned NOT NULL,
   `link` varchar(150) NOT NULL,
   PRIMARY KEY (`idmensajes`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `mensajes`
@@ -532,16 +531,12 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
 INSERT INTO `mensajes` (`idmensajes`, `nombre`, `correo`, `telefono`, `asunto`, `mensaje`, `fecha`, `estado`, `link`) VALUES
 (1, 'wdfadf', 'qefqe@gmail.com', '', 'wrgw', 'wg', '2017-01-22 08:31:58', 0, ''),
 (2, 'acadc', 'qefqe@gmail.com', '', 'aca', 'asc', '2017-01-22 08:52:36', 0, ''),
+(3, '', 'fr@fff.com', '', 'wdwd', 'efqef', '2017-01-23 22:47:15', 0, ''),
 (4, 'asvwdv', 'dsv@efef.com', '', 'wfwdf', 'wefewqf', '2017-01-23 22:49:45', 0, ''),
 (5, 'qcqsc', 'ccec@ded.com', '', 'ewdfq', 'deqdeqfqefceq wd cs fc \r\ncs \r\nwd \r\n w\r\n', '2017-01-23 22:50:48', 0, ''),
 (6, 'cqdc', 'qc@dede.com', '', 'eedfee2de2', 'dededwed', '2017-01-23 22:54:20', 0, ''),
-(9, 'julio', 'jquevedo@fuxion.net', '', 'prueba', 'pruebaaaaa', '2017-01-24 16:17:32', 0, ''),
-(10, '', '', '', '', '', '2017-01-25 16:25:15', 0, ''),
-(11, 'Julio Quevedo', 'julio_jc2002@hotmail.com', '', 'lolo', 'sqcascdacsdac', '2017-02-12 14:01:10', 0, ''),
-(12, 'Julio Quevedo', 'julio_jc2002@hotmail.com', '', 'jujuju', 'fweqfwefwef', '2017-02-12 14:03:44', 0, 'http://www.servitotalperu.com/producto-01/'),
-(13, 'Julio Quevedo', 'julio_jc2002@hotmail.com', '', 'juju', 'jujujuj', '2017-02-12 14:05:34', 0, 'http://www.servitotalperu.com/producto-01/'),
-(14, 'Julio Quevedo', 'julio_jc2002@hotmail.com', '', 'prueba', 'ho a hola hola', '2017-02-12 14:07:12', 0, 'http://www.servitotalperu.com/contacto/'),
-(15, 'Jacomina Warner', 'jacominawarner.mkt@gmail.com', '', 'Want more clients and customers?', 'Do you wish you could increase your online leads? We have helped a lot of businesses thrive in this market and we can help you! Simply hit reply and I’ll share with you the cost and the benefits.\n', '2017-02-16 04:53:50', 0, 'http://www.servitotalperu.com/contacto/');
+(7, '', 'ede@eded.com', '', 'qedeq', 'qed', '2017-01-24 00:15:48', 0, ''),
+(8, 'swsw', 'julio_jc2002@hotmail.com', '', 'ded', 'ed', '2017-02-14 01:27:26', 0, 'http://localhost/servitotalperu/contacto/');
 
 -- --------------------------------------------------------
 
@@ -594,7 +589,7 @@ CREATE TABLE IF NOT EXISTS `parametros` (
   `orden` int(10) unsigned NOT NULL,
   `idsw` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idparametros`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Volcado de datos para la tabla `parametros`
@@ -603,14 +598,14 @@ CREATE TABLE IF NOT EXISTS `parametros` (
 INSERT INTO `parametros` (`idparametros`, `llave`, `valor`, `descripcion`, `orden`, `idsw`) VALUES
 (1, 'be_elementos_x_pagina', '20', '', 0, 1),
 (2, 'telefono_frontis', '(511) 2XX-XXXX', '', 0, 1),
-(3, 'celular_frontis', '9999-99999', '', 0, 1),
+(3, 'celular_frontis', 'YYY YYY YYY', '', 0, 1),
 (4, 'link_linkeding', 'https://www.linkedin.com/', '', 0, 1),
 (5, 'link_youtube', 'http://www.youtube.com/', '', 0, 1),
 (6, 'link_facebook', 'https://www.facebook.com/', '', 0, 1),
 (7, 'whatsapp', '987400556', '', 0, 0),
-(8, 'link_twitter', 'http://www.twitter.com-info@servitotalperu.com', '', 0, 1),
+(8, 'link_twitter', 'http://www.twitter.com', '', 0, 1),
 (9, 'ip_prueba', '', 'Ip de prueba, borrrarlo en producción', 0, 0),
-(10, 'correo_contacto', 'julioquevedog@gmail.com', 'Correo al que llega los mensajes del formulario de contacto', 0, 1),
+(10, 'correo_contacto', 'info@servitotalperu.com', 'Correo al que llega los mensajes del formulario de contacto', 0, 1),
 (11, 'copia_correo_contacto', 'ycalle@solucionesajax.com', 'Correo al que llega una copia del formulario de contacto', 0, 1),
 (13, 'direccion', 'Jr. Antonio Bazo 709 Int. 1110 (Piso 11) Lima - Lima - La Victoria', '', 0, 1),
 (14, 'fe_elementos_x_pagina', '2', '', 0, 1),
@@ -620,7 +615,10 @@ INSERT INTO `parametros` (`idparametros`, `llave`, `valor`, `descripcion`, `orde
 (19, 'atencion-L-V', 'Lun - Vie 08AM-8PM', '', 0, 1),
 (20, 'franja_naranja', 'EXPERTOS DE INGENIERÍA EN SEGURIDAD INDUSTRIAL, VIAL, EPP Y ROPA INDUSTRIAL', '', 0, 0),
 (21, 'atencion-S', 'Sábado / 9 am a 2 pm', '', 0, 1),
-(22, 'atencion-D', 'Domingo / Cerrado', '', 0, 1);
+(22, 'atencion-D', 'Domingo / Cerrado', '', 0, 1),
+(23, 'titulo_ini_1', 'ServiTotal Peru ofrece dos tipos de Servicios', '', 0, 1),
+(24, 'subtitulo_ini_1', 'Son los siguientes:', '', 0, 1),
+(25, 'titulo_ini_2', '<strong>Maquinarias</strong> de ServiTotal Peru', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -776,13 +774,10 @@ CREATE TABLE IF NOT EXISTS `secciones` (
 
 INSERT INTO `secciones` (`idsecciones`, `title`, `keyword`, `description`, `nombre`, `titulo`, `seo`, `sumilla`, `descripcion`, `imagen`, `idprimera_hoja`) VALUES
 (1, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'ServiTotal Peru', 'inicio', '', '&nbsp;Se caracteriza por ser una empresa que brinda a todos sus clientes.', '', 1),
-(2, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'TEXTO - INICIO', 'ServiTotal Peru ofrece dos tipos de <strong>Servicios</strong>', 'inicio-ofrece', '&nbsp;', 'Son los siguientes:', '', 1),
-(3, 'Inicio Maquinarias', 'Inicio Maquinarias', 'Inicio Maquinarias', 'Inicio Maquinarias', '<strong>Maquinarias</strong> de ServiTotal Peru', 'inicio-maquinarias', '&nbsp;', '<strong>&nbsp;</strong>', '', 1),
-(6, 'Inicio Clientes', 'Inicio Clientes', 'Inicio Clientes', 'NUESTROS <span>CLIENTES</span>', '', 'inicio-clientes', '&nbsp;', 'Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.', '', 1),
 (7, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'Nosotros', '¿QUIÉNES SOMOS?', 'nosotros', '', '<h2>SERVITOTAL <strong>PER&Uacute;</strong></h2>\r\n<strong>SERVITOTAL </strong>es una cadena de Centros de Servicio T&eacute;cnico ubicados en la Regi&oacute;n Centroamericana que brinda servicios t&eacute;cnicos en reparaci&oacute;n de art&iacute;culos para el hogar y electrodom&eacute;sticos a trav&eacute;s de una atenci&oacute;n confiable para nuestros clientes.<br />\r\n<br />\r\n<strong>SERVITOTAL </strong>es el Centro de Servicio garantizado de las marcas: SONY, Samsung, Whirlpool, Philips, Frigdaire, LG SONY y Apple; lo que nos permite brindar el servicio de garant&iacute;a de f&aacute;brica que ofrecen los proveedores. <strong>NUESTROS VALORES</strong>: Eficiencia &ndash; Servicio al Cliente &ndash; Honestidad &ndash; Integridad &ndash; Responsabilidad &ndash; Confiabilidad &ndash; Sinceridad &ndash; Respeto &ndash; Trabajo en Equipo &ndash; Actitud Positiva.&nbsp;<br />\r\n<br />\r\n<br />\r\n<strong>MISION</strong><br />\r\n<br />\r\nEnfocados en la filosof&iacute;a de servicio al cliente, la excelencia en la calidad y la rentabilidad, promovemos el desarrollo de nuestra gente y grantizamos la satisfacci&oacute;n total de nuestros clientes.<br />\r\n<br />\r\n<strong>VISION</strong><br />\r\n<br />\r\nSer la cadena de Centro de Servicio T&eacute;cnico l&iacute;deres en la Regi&oacute;n Centroamericana en servicios t&eacute;cnicos de art&iacute;culo para el hogar a trav&eacute;s e una tenci&oacute;n eficiente y confiable que supere las expectativas de nuestros clientes.<br />\r\n<br />\r\n<br type="_moz" />\r\n<br />', '', 1),
 (16, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'Clientes', 'Algunos de nuestros clientes', 'Clientes', '', '', '', 1),
 (18, 'Contacto', 'Contacto', 'Contacto', 'Contacto', 'Contacto', 'contacto', '', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years .', '', 1),
-(19, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'Mensaje', 'Mensaje', 'mensaje', '', '', '', 1);
+(19, 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'SERVITOTAL PERÚ', 'Mensaje', 'Mensaje', 'mensaje', '&nbsp;', 'Son los siguientes:', '', 1);
 
 -- --------------------------------------------------------
 
@@ -817,7 +812,7 @@ CREATE TABLE IF NOT EXISTS `servicios` (
   PRIMARY KEY (`idservicios`),
   KEY `inmuebles_FKIndex4` (`idestado`),
   KEY `productos_FKIndex2` (`idcategoria_servicios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `servicios`
@@ -825,7 +820,7 @@ CREATE TABLE IF NOT EXISTS `servicios` (
 
 INSERT INTO `servicios` (`idservicios`, `idcategoria_servicios`, `idestado`, `title`, `keyword`, `description`, `nombre`, `titulo`, `seo`, `codigo`, `sumilla`, `descripcion`, `pvr`, `pvp`, `video`, `tags`, `orden`, `idprimera_hoja`, `idsw`, `fecha`, `frecuencia`, `horario`, `horas`) VALUES
 (1, 1, 0, 'Servicios 01', 'Servicios 01', 'Servicios 01', 'Servicios 01', '', 'Servicios-01', '', '&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also', '&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also', '0.00', '', 'https://www.youtube.com/embed/QMgnyKuK7ns', '', 1, 0, 1, '0000-00-00', '', '', ''),
-(2, 1, 0, 'Servicios 02', 'Servicios 02', 'Servicios 02', 'Servicios 02', '', 'Servicios-02', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also&nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also <br />\n<br />\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also&nbsp;', '0.00', '', 'https://www.youtube.com/embed/QMgnyKuK7ns', '', 2, 0, 1, '0000-00-00', '', '', ''),
+(2, 1, 0, 'Servicios 02', 'Servicios 02', 'Servicios 02', 'Servicios 02', '', 'Servicios-02', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also&nbsp;', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also <br />\r\n<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also&nbsp;', '0.00', '', 'https://www.youtube.com/embed/QMgnyKuK7ns', '', 2, 0, 1, '0000-00-00', '', '', ''),
 (3, 1, 0, 'Servicios 03', 'Servicios 03', 'Servicios 03', 'Servicios 03', '', 'Servicios-03', '', '', '', '0.00', '', '', '', 3, 0, 1, '0000-00-00', '', '', ''),
 (4, 1, 0, 'Servicios 04', 'Servicios 04', 'Servicios 04', 'Servicios 04', '', 'Servicios-04', '', '&nbsp;', '&nbsp;', '0.00', '', '', '', 4, 0, 1, '0000-00-00', '', '', '');
 
@@ -875,17 +870,19 @@ CREATE TABLE IF NOT EXISTS `servicios_imagenes` (
   `idprimera_foto` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idservicios_imagenes`),
   KEY `productos_imagenes_FKIndex1` (`idservicios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `servicios_imagenes`
 --
 
 INSERT INTO `servicios_imagenes` (`idservicios_imagenes`, `idservicios`, `title`, `keyword`, `description`, `nombre`, `seo`, `sumilla`, `descripcion`, `imagen`, `link`, `orden`, `idsw`, `idprimera_foto`) VALUES
-(2, 2, '', '', '', '', '', '', '', 'servicios_imagenes_2_6ylcZ.png', '', 1, 0, 1),
-(3, 1, '', '', '', '', '', '', '', 'servicios_imagenes_1_5vSDA.png', '', 0, 0, 1),
-(4, 4, '', '', '', '', '', '', '', 'servicios_imagenes_4_OKNJf.png', '', 1, 0, 1),
-(5, 3, '', '', '', '', '', '', '', 'servicios_imagenes_3_b049A.png', '', 0, 0, 1);
+(2, 2, '', '', '', '', '', '', '', 'servicios_imagenes_2_fvCak.png', '', 1, 0, 1),
+(3, 1, '', '', '', '', '', '', '', 'servicios_imagenes_1_a2qR5.jpg', '', 0, 0, 1),
+(5, 3, '', '', '', '', '', '', '', 'servicios_imagenes_3_zun9t.jpg', '', 0, 0, 1),
+(6, 4, '', '', '', '', '', '', '', 'servicios_imagenes_4_gzTvE.jpg', '', 0, 0, 1),
+(7, 4, '', '', '', '', '', '', '', 'servicios_imagenes_4_dHdym.jpg', '', 1, 0, 2),
+(9, 5, '', '', '', '', '', '', '', 'servicios_imagenes_5_rJIX3.jpg', '', 2, 0, 1);
 
 -- --------------------------------------------------------
 

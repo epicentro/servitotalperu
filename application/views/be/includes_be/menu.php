@@ -76,9 +76,9 @@
                                         <a href="#">Servicios</a>
                                         <ul>
                                             
-                                            <li>
-                                                <a href="<?php echo base_url()."be/categoria_servicios/listar/" ?>">Mnto. Categoria </a>
-                                            </li>
+<!--                                             <li>
+                                                <a href="<?php //echo base_url()."be/categoria_servicios/listar/" ?>">Mnto. Categoria </a>
+                                            </li> -->
                                             
                                             
                                             <li>
@@ -108,9 +108,9 @@
                                         <a href="#">Maquinarias</a>
                                         <ul>
                                             
-                                            <li>
-                                                <a href="<?php echo base_url()."be/categoria_maquinarias/listar/" ?>">Mnto. Categoria </a>
-                                            </li>
+<!--                                             <li>
+                                                <a href="<?php //echo base_url()."be/categoria_maquinarias/listar/" ?>">Mnto. Categoria </a>
+                                            </li> -->
                                             
                                             
                                             <li>

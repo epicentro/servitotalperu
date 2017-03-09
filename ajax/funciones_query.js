@@ -231,7 +231,7 @@ function elimina_productos_imagenes(valor){
 
             
             if(document.domain=="localhost"){
-                var ruta="http://localhost/gonzalosalas/be/banners/elimina_banners";
+                var ruta="http://localhost/servitotalperu/be/banners/elimina_banners";
             }else{
                 var ruta="http://"+document.domain+"/be/banners/banners_banners";
             }
@@ -249,7 +249,7 @@ function elimina_productos_imagenes(valor){
 
             
             if(document.domain=="localhost"){
-                var ruta="http://localhost/gonzalosalas/be/parametros/elimina_parametros";
+                var ruta="http://localhost/servitotalperu/be/parametros/elimina_parametros";
             }else{
                 var ruta="http://"+document.domain+"/be/parametros/elimina_parametros";
             }

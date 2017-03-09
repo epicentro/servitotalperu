@@ -32,7 +32,7 @@ class banners extends CI_Controller {
         array('nombre_campo'=>'nombre', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Nombre', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'alt', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'ALT', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'link', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Link', 'multinivel'=>'no', 'valor'=>''),
-        array('nombre_campo'=>'sumilla', 'tipo'=>'text', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Sumilla', 'multinivel'=>'no', 'valor'=>''),
+        //array('nombre_campo'=>'sumilla', 'tipo'=>'text', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Sumilla', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'imagen', 'tipo'=>'text', 'show'=>'no', 'clave'=>'no', 'rotulo'=>'Imagen', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'orden', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Orden', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'idsw', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'foranea', 'rotulo'=>'Visible', 'multinivel'=>'no', 'valor'=>''),

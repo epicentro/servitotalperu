@@ -39,23 +39,7 @@ class inicio extends padre {
         $data["servicios"]=$this->servicios;
 
         
-
-        //INICIO OFRECE
-        $strsql="select nombre, titulo, descripcion  from secciones 
-                 where seo='inicio-ofrece' ";
-        $fila=$this->modelo_base->c_una_fila($strsql);
-        $data["nombre_ofrece"]=$fila->nombre;
-        $data["titulo_ofrece"]=$fila->titulo;
-        $data["descripcion_ofrece"]=$fila->descripcion;        
-        
-         
-        //INICIO MAQUINARIA
-        $strsql="select nombre, titulo, descripcion  from secciones 
-                 where seo='inicio-maquinarias' ";
-        $fila=$this->modelo_base->c_una_fila($strsql);
-        $data["nombre_maquinarias"]=$fila->nombre;
-        $data["titulo_maquinarias"]=$fila->titulo;
-        $data["descripcion_maquinarias"]=$fila->descripcion;      
+  
              
                 
         //EXTRAEMOS LOS BANNERS CENTRALES PARA EL SLIDE

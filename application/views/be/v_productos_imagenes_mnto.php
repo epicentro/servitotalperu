@@ -39,7 +39,7 @@ function abrir_popup(valor, ancho, alto){
 <table  cellpadding="0" cellspacing="0" class="tb_mnto">
 	<thead><tr>
             <th>Id</th>
-            <th>Nombre</th>
+            <th>Imagen</th>
             <th>Orden</th>
             <th>Primera Foto</th>
             

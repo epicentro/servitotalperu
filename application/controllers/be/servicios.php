@@ -30,7 +30,7 @@ class servicios extends CI_Controller {
         
         //idservicios, idcategoria_servicios, title, keyword, description, nombre, seo, codigo, sumilla, descripcion, ficha_tecnica, idsw
         array('nombre_campo'=>'idservicios', 'tipo'=>'varchar', 'show'=>'no' ,'clave'=>'primaria', 'rotulo'=>'', 'multinivel'=>'no', 'valor'=>''),
-        array('nombre_campo'=>'idcategoria_servicios', 'tipo'=>'varchar', 'show'=>'si' ,'clave'=>'foranea', 'rotulo'=>'Categoria', 'multinivel'=>'si', 'valor'=>''),
+        //array('nombre_campo'=>'idcategoria_servicios', 'tipo'=>'varchar', 'show'=>'si' ,'clave'=>'foranea', 'rotulo'=>'Categoria', 'multinivel'=>'si', 'valor'=>''),
         //array('nombre_campo'=>'idmarcas', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'foranea', 'rotulo'=>'Marcas', 'multinivel'=>'no', 'valor'=>''),
         array('nombre_campo'=>'title', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Title', 'multinivel'=>'no',  'valor'=>''),
         array('nombre_campo'=>'keyword', 'tipo'=>'varchar', 'show'=>'si', 'clave'=>'no', 'rotulo'=>'Keyword', 'multinivel'=>'no', 'valor'=>''),
