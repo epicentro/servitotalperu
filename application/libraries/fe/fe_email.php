@@ -459,7 +459,7 @@ class fe_email {
 
                            $this->CI->email->from($fila->correo);
                            $this->CI->email->to($para); 
-                           //$this->CI->email->cc($copia); 
+                           $this->CI->email->cc($copia); 
                            //$this->CI->email->bcc('ycalle@solucionesajax.com'); 
 
                            $this->CI->email->subject($asunto);

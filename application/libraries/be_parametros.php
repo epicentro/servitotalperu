@@ -66,7 +66,7 @@ class be_parametros {
     
     public function primera_foto($id){
       
-        $strsql="select imagen from productos_imagenes where idproductos='$id' limit 1";
+        $strsql="select imagen from productos_imagenes where idproductos='$id' and idprimera_foto='1' order by orden limit 1";
                
         $fila=$this->CI->modelo_base->c_una_fila($strsql);
         if($fila=="0"){
@@ -80,7 +80,7 @@ class be_parametros {
 
     public function primera_foto_servicios($id){
       
-        $strsql="select imagen from servicios_imagenes where idservicios='$id' limit 1";
+        $strsql="select imagen from servicios_imagenes where idservicios='$id' and idprimera_foto='1' order by orden limit 1";
                
         $fila=$this->CI->modelo_base->c_una_fila($strsql);
         if($fila=="0"){
@@ -94,7 +94,7 @@ class be_parametros {
 
     public function primera_foto_maquinarias($id){
       
-        $strsql="select imagen from maquinarias_imagenes where idmaquinarias='$id' limit 1";
+        $strsql="select imagen from maquinarias_imagenes where idmaquinarias='$id' and idprimera_foto='1' order by orden limit 1";
                
         $fila=$this->CI->modelo_base->c_una_fila($strsql);
         if($fila=="0"){

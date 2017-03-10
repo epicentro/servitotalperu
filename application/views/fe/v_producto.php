@@ -26,7 +26,9 @@
                     <div class="row mb-xlg">
                         <div class="col-sm-12">
                             <h2><strong>Descripción</strong></h2>
-                            <p> <?php echo $descripcion; ?></p>
+                            <p> 
+                                <img class="pull-left mr-xlg img-responsive" alt="<?php echo $titulo; ?>" src="<?php echo base_url()."img_productos/".$imagenes->imagen; ?>" style="width:20%;">
+                            <?php echo $descripcion; ?></p>
 
                             </br></br>
                             <!-- <a href="blog-post.html" class="btn btn-xs btn-primary">Descargar como PDF</a></br></br></br></br> -->
