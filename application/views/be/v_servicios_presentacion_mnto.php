@@ -21,7 +21,7 @@
 
 
 
-                         <form id="form1" method="post" enctype="multipart/form-data" action="<?php echo base_url();?>be/productos_presentacion/grabar/<?php echo $id; ?>" onsubmit="return validar();" >
+                         <form id="form1" method="post" enctype="multipart/form-data" action="<?php echo base_url();?>be/servicios_presentacion/grabar/<?php echo $id; ?>" onsubmit="return validar();" >
 
         <table cellpadding="0" cellspacing="0" class="tb_mnto"  >
 
@@ -98,10 +98,10 @@
    
     //CUANDO ENTRA LA PRIMERA VEZ CAPTURAMOS LA RUTA DE DONDE VINO
     //Y LO GUARDAMOS EN UNA VARIABLE DE SESSION
-    if(!$this->session->userdata('ruta_mnto_productos')){
+    if(!$this->session->userdata('ruta_mnto_servicios')){
            
            $ruta=$_SERVER['HTTP_REFERER'];
-           $this->session->set_userdata('ruta_mnto_productos', $ruta);
+           $this->session->set_userdata('ruta_mnto_servicios', $ruta);
        }
        
    
@@ -110,7 +110,7 @@
 <script>
 $(".regresar").click(function(){
     
-    window.location.href="<?php echo $this->session->userdata('ruta_mnto_productos');?>";
+    window.location.href="<?php echo $this->session->userdata('ruta_mnto_servicios');?>";
     
     
 });

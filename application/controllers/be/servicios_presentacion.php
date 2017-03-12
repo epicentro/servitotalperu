@@ -9,11 +9,11 @@
  *
  * @author Yasser
  */
-class productos_presentacion extends CI_Controller {
+class servicios_presentacion extends CI_Controller {
     //put your code here
      
-    public $tabla="productos";
-    public $idtabla="idproductos";
+    public $tabla="servicios";
+    public $idtabla="idservicios";
    
     
     public function  __construct() {
@@ -33,7 +33,7 @@ class productos_presentacion extends CI_Controller {
     public function listar(){
              $this->validacion->validacion_login();
              
-             //ID DEL PRODUCTO QUE LE VAMOS A INGRESAR IMAGENES
+             //ID DEL SERVICIO QUE LE VAMOS A INGRESAR IMAGENES
              $id=$this->uri->segment(4);
              $data['id']=$id;
              
@@ -41,7 +41,7 @@ class productos_presentacion extends CI_Controller {
              $data["idtabla"]=$this->idtabla;
              
              
-             //AVERIGUAMOS EL NOMBRE DEL PRODUCTO QUE LE VAMOS A INGRESAR IMAGENES
+             //AVERIGUAMOS EL NOMBRE DEL SERVICIO QUE LE VAMOS A INGRESAR IMAGENES
                 $strsql="select nombre from $this->tabla where $this->idtabla='$id'";
                 $row=$this->modelo_base->c_una_fila($strsql);
 
@@ -78,9 +78,9 @@ class productos_presentacion extends CI_Controller {
        $valor=$this->input->post("presentacion");
        $valor=addslashes($valor);
        
-       $strsql="update productos set descripcion='$valor' where idproductos='$id'";
+       $strsql="update servicios set descripcion='$valor' where idservicios='$id'";
        $this->modelo_base->ejecuta($strsql);
-       $url=base_url()."be/productos_presentacion/listar/$id";
+       $url=base_url()."be/servicios_presentacion/listar/$id";
                         
                
        redirect($url);

@@ -37,11 +37,20 @@ section.section {margin-bottom: 0;}
 
     .section-default{padding: 10px 0 !important;margin-top: 0 !important;}
     .wr-machine-ini .item-machine-ini {padding-top: 5px;padding-bottom: 5px;}    
-    .sticky-header-active #header .header-btn-collapse-nav {margin: 42px 0 8px 15px !important;}
-    .sticky-header-active .header-logo a img{top:23px !important; height: inherit !important;}
+    .sticky-header-active #header .header-btn-collapse-nav {margin: 38px 0 8px 15px !important;}
+    .sticky-header-active .header-logo a img{top:39px !important; height: inherit !important; margin: 0 !important;}
 
     .featured-box .box-content { padding: 30px 11px 10px 10px !important;}
 
     .nav.navbar-nav.navbar-left span{ display: block !important;text-align: center !important;}
     .nav.navbar-nav.navbar-left hr{ display: none !important;}
+
+    .owl-carousel{width: 100% !important;}
 }
+
+
+.colBlack{color: #000 !important;}
+.colBlack:hover{ text-decoration: none;}
+.sticky-header-active .header-logo a img{ top:25px !important;margin-top: 0 !important;margin-bottom: 0 !important;}
+.sticky-header-active .header-body{min-height: 100px !important;}
+.header-logo{height: 90px !important;}

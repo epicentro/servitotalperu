@@ -45,7 +45,7 @@ class maquinaria_detalle extends padre {
                 $data["formulario_modal"]=$this->load->view("fe/includes_fe/formulario_modal",$data ,true);    
                 
                 //CARGAMOS SUS IMAGENES
-                $strsql="select imagen from maquinarias_imagenes where idmaquinarias='$fila->idmaquinarias' and idprimera_foto='1' order by orden";
+                $strsql="select imagen from maquinarias_imagenes where idmaquinarias='$fila->idmaquinarias' order by orden";
                 $data["imagenes"]=$this->modelo_base->consulta($strsql);
 
 

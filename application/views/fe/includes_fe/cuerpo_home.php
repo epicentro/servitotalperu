@@ -21,11 +21,17 @@
         <div class="container">
           <div class="row mt-xl mb-xl">
             <div class="col-md-3">
-              <img class="img-responsive appear-animation" src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[0]->imagen;?>" alt="" data-appear-animation="fadeInLeft">
+              <a id="btn_seccion" href="<?php echo base_url()."servicio/".$servicios[0]->seo;?>">
+                <img class="img-responsive appear-animation" src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[0]->imagen;?>" alt="" data-appear-animation="fadeInLeft">
+              </a>
             </div>
             
             <div class="col-md-9">
-              <h2 class="mt-xl">Servicio <strong><?php echo $servicios[0]->nombre;?></strong></h2>
+              <h2 class="mt-xl">
+                <a id="btn_seccion" href="<?php echo base_url()."servicio/".$servicios[0]->seo;?>" class="colBlack">
+                  Servicio <strong><?php echo $servicios[0]->nombre;?></strong>
+                </a>
+              </h2>
               <p><?php echo $servicios[0]->sumilla;?></p>
               <div class="call-to-action-btn">
                 <a id="btn_seccion" href="<?php echo base_url()."servicio/".$servicios[0]->seo;?>" class="btn btn-lg btn-primary mt-xl">
@@ -39,7 +45,10 @@
           <div class="container">
             <div class="row">
               <div class="col-md-9">
-                <h2 class="mt-xl">Servicio <strong><?php echo $servicios[1]->nombre;?></strong></h2>
+                <h2 class="mt-xl">
+                  <a id="btn_seccion" href="<?php echo base_url()."servicio/".$servicios[1]->seo;?>" class="colBlack">
+                    Servicio <strong><?php echo $servicios[1]->nombre;?></strong></h2>
+                  </a>
                 <p>
                   <?php echo $servicios[0]->sumilla;?>
                 </p>
@@ -50,7 +59,9 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <img class="hidden-xs img-responsive appear-animation"  src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[1]->imagen;?>" alt="" data-appear-animation="fadeInRight">
+                <a id="btn_seccion" href="<?php echo base_url()."servicio/".$servicios[1]->seo;?>">
+                  <img class="hidden-xs img-responsive appear-animation"  src="<?php echo base_url();?>/img_servicios/<?php echo $servicios[1]->imagen;?>" alt="" data-appear-animation="fadeInRight">
+                </a>
               </div>
             </div>
           </div>
@@ -79,10 +90,16 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 item-machine-ini">
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="img-responsive mb-lg" src="<?php echo base_url();?>/img_maquinarias/<?php echo $value->imagen;?>" alt="">
+                      <a href="<?php echo base_url()."maquinaria/".$value->seo;?>">
+                        <img class="img-responsive mb-lg" src="<?php echo base_url();?>/img_maquinarias/<?php echo $value->imagen;?>" alt="">
+                      </a>
                     </div>
                     <div class="col-md-8">
-                      <h4 class="mb-xs">Maquinaria (<?php echo $value->nombre;?>)</h4>
+                      <h4 class="mb-xs">
+                        <a href="<?php echo base_url()."maquinaria/".$value->seo;?>" class="colBlack">
+                          Maquinaria (<?php echo $value->nombre;?>)
+                        </a>
+                      </h4>
                       <p><?php echo $value->sumilla;?></p>
                       <p><a class="btn-flat btn-xs" href="<?php echo base_url()."maquinaria/".$value->seo;?>">Ver más <i class="fa fa-arrow-right"></i></a></p>
                     </div>

@@ -46,7 +46,7 @@ class servicio_detalle extends padre {
                 
                 
                 //CARGAMOS SUS IMAGENES
-                $strsql="select imagen from servicios_imagenes where idservicios='$fila->idservicios' and idprimera_foto='1' order by orden";
+                $strsql="select imagen from servicios_imagenes where idservicios='$fila->idservicios'   order by orden";
                 $data["imagenes"]=$this->modelo_base->consulta($strsql);
 
 

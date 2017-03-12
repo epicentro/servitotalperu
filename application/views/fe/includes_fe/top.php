@@ -1,6 +1,6 @@
 
 
-      <header id="header" data-plugin-options="{&quot;stickyEnabled&quot;: true, &quot;stickyEnableOnBoxed&quot;: true, &quot;stickyEnableOnMobile&quot;: true, &quot;stickyStartAt&quot;: 57, &quot;stickySetTop&quot;: &quot;-42px&quot;, &quot;stickyChangeLogo&quot;: true}" style="min-height: 171px;">
+      <header id="header" data-plugin-options="{&quot;stickyEnabled&quot;: true, &quot;stickyEnableOnBoxed&quot;: true, &quot;stickyEnableOnMobile&quot;: true, &quot;stickyStartAt&quot;: 57, &quot;stickySetTop&quot;: &quot;-28px&quot;, &quot;stickyChangeLogo&quot;: true}" style="min-height: 171px;">
           <div class="header-top header-top-colored header-top-primary">
             <div class="container">
               <div class="nav navbar-nav navbar-left">

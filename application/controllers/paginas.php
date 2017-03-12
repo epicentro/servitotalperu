@@ -44,8 +44,8 @@ class paginas extends padre {
                 
                 
                 //CARGAMOS SUS IMAGENES
-                $strsql="select imagen from productos_imagenes where idproductos='$fila->idproductos' and idprimera_foto='1' order by orden";
-                $data["imagenes"]=$this->modelo_base->c_una_fila($strsql);
+                $strsql="select imagen from productos_imagenes where idproductos='$fila->idproductos' order by orden";
+                $data["imagenes"]=$this->modelo_base->consulta($strsql);
                 
                 $data["seccion"]="fe/v_producto";
                 $this->load->view("fe/includes_fe/template_productos", $data);
